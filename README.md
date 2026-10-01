@@ -1,8 +1,10 @@
 # Five-Class Diabetic Retinopathy Classification
 
-A Google Colab computer-vision study for grading diabetic retinopathy from retinal fundus images. Starting from a label table with **35,108 records**, the project organizes images into five severity folders, corrects severe class imbalance through deterministic undersampling, compares CNN training strategies, and evaluates the recorded runs on the same balanced holdout set with TensorFlow/Keras.
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/raven-172/diabetic-retinopathy-cnn/blob/main/notebooks/diabetic_retinopathy_cnn.ipynb)
 
-## Recorded Colab experiment results
+A Google Colab computer-vision project for grading diabetic retinopathy from retinal fundus images. It converts **35,108** `labels.csv` records into class-specific folders, balances class skew through seed-controlled undersampling, preprocesses 3,500 images, and compares baseline, tuned, and augmentation-based TensorFlow/Keras CNN experiments. The best recorded run achieved **38.48% test accuracy** and **33.94% macro F1** on a balanced 525-image holdout set.
+
+## Recorded experiment results
 
 All stored runs used a test set of **525 images**, with 105 examples per class.
 
@@ -12,7 +14,7 @@ All stored runs used a test set of **525 images**, with 105 examples per class.
 | Tuned CNN | Dense(125); Dropout(0.3); early stopping | **39.05%** | **38.48%** | **42.38%** | **38.48%** | **33.94%** |
 | Augmentation fine-tuning | Continued the tuned CNN with rotation, zoom, shifts, brightness changes and horizontal flips | 21.71% | 21.52% | 8.82% | 21.52% | 11.80% |
 
-The tuned configuration improved test accuracy by **12.19 percentage points** and macro F1 by **15.58 points** over the baseline. Its matching architecture checkpoint is saved as [`models/CNNv2.keras`](models/CNNv2.keras). These values are transcribed from stored Colab notebook outputs and were not rerun in this repository. The augmentation row is a continuation of the tuned model rather than an independently initialized comparison; a later lighter-augmentation run is excluded because its evaluation cell called the wrong model.
+The tuned configuration improved test accuracy by **12.19 percentage points** and macro F1 by **15.58 points** over the baseline. Its matching architecture checkpoint is saved as [`models/CNNv2.keras`](models/CNNv2.keras). These values are transcribed from the original notebook outputs and were not rerun in this repository. The augmentation row is a continuation of the tuned model rather than an independently initialized comparison; a later lighter-augmentation run is excluded because its evaluation cell called the wrong model.
 
 ## Dataset and label-based organization
 
