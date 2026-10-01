@@ -1,0 +1,26 @@
+.DS_Store
+.idea/
+.vscode/
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Raw and generated datasets
+dataset/
+datasets/
+dataset_split/
+datasets_split/
+dataset_undersample/
+datasets_undersample/
+data/raw/
+data/processed/
+data/**/*.jpeg
+data/**/*.jpg
+data/**/*.png
+**/labels.csv
+
+# Generated training artifacts
+artifacts/
+models/*.keras
+!models/CNNv2.keras
