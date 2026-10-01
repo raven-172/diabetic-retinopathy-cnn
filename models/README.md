@@ -1,6 +1,6 @@
 # Model checkpoint
 
-`CNNv2.keras` is the checkpoint tied to the best documented notebook run.
+`CNNv2.keras` is the checkpoint tied to the best documented notebook run. The root README reports all other traceable experiment results; only this checkpoint is retained because the other saved model has no matching evaluation block in the notebook.
 
 - Input: 180×180 RGB image scaled to `[0, 1]`
 - Output: probabilities for labels 0–4
